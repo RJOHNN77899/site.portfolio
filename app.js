@@ -247,21 +247,18 @@ closeLinks.forEach(function(closeLink) {
 document.addEventListener("DOMContentLoaded", function () {
     var aboutWrapper = document.querySelector('.about-wrapper');
 
-    if (aboutWrapper) {
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('appear');
-                }
-            });
-        }, {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.4
-        });
-
-        observer.observe(aboutWrapper);
+// Always add 'appear' if it's in the initial viewport
+    function checkAndReveal() {
+        const rect = aboutWrapper.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom >= 0;
+        if (inView) {
+            aboutWrapper.classList.add('appear');
+        }
     }
+
+    document.addEventListener("DOMContentLoaded", checkAndReveal);
+    window.addEventListener("scroll", checkAndReveal);
+
 });
 
 
