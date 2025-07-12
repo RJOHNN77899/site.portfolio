@@ -54,15 +54,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /*header*/
 header {
-    position: relative;
-    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
     min-height: 500px;
     width: 100%;
     background: var(--accentDark);
     background-size: cover !important;
     text-align: center;
+    position: relative;
     overflow: hidden;
 }
+
 
 /*NavBar*/
 
@@ -127,13 +133,14 @@ header .navbar li:nth-child(5).active a{
 /*Banner items*/
 
 header .banner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 85%;
     text-align: center;
+    position: relative; /* not absolute */
+    top: unset;
+    left: unset;
+    transform: none;
 }
+
 
 header .banner-text {
     width: 100%;
