@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 /*header*/
 header {
     position: relative;
-    height: 950px;
+    height: 650px;
     min-height: 500px;
     width: 100%;
     background: var(--accentDark);
@@ -193,8 +193,8 @@ header .social li a:hover{
 /* About Section */
 #id-about {
     justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 60px;
     background-color: var(--accentDark);
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
@@ -330,6 +330,11 @@ header .social li a:hover{
         padding: 0 20px; /* Adds breathing room on the sides */
     }
 
+        #id-about {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+    
     .about-content {
         text-align: center;
     }
@@ -885,8 +890,4 @@ header .social li a:hover{
   mix-blend-mode: screen; /* allows light to affect dark backgrounds */
   transition: background-position 0.05s ease;
 }
-
-
-
-
 
