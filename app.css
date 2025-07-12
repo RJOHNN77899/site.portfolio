@@ -29,13 +29,16 @@ hr {
 p { margin: 0 0 30px 0; }
 
 p.lead {
-   font-family: "lora-regular", serif;
-   font-size: 1rem;
-   line-height: 1.7;
-   color: #000000;
-   width: 60%;
-   box-sizing: border-box; 
-}
+    font-family: "lora-regular", serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #c6bfbf;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    box-sizing: border-box; 
+    text-align: inherit;
+ } 
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'opensans-bold', sans-serif;
@@ -189,32 +192,35 @@ header .social li a:hover{
 
 /* About Section */
 #id-about {
+    justify-content: center;
     padding-top: 100px;
     padding-bottom: 80px;
     background-color: var(--accentDark);
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    min-height: 100vh;
+    text-align: center;
 }
 
 .about-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 40px;
     padding: 0 5%;
-
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    text-align: left;
 }
 
-
-.about-wrapper.appear {
-    opacity: 1;
-    transform: translateY(0);
+.about-image {
+    flex-shrink: 0;
 }
 
 .about-image img {
@@ -229,6 +235,19 @@ header .social li a:hover{
 .about-content {
     flex: 1;
     min-width: 300px;
+    max-width: 650px;
+}
+
+.about-content h3,
+.about-content h1,
+.about-buttons {
+    text-align: left;
+}
+
+
+.about-wrapper.appear {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-content h3 {
@@ -278,30 +297,6 @@ header .social li a:hover{
     text-decoration: underline;
 }
 
-.info-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.info-list li {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.info-list strong {
-    text-transform: uppercase;
-    color: var(--mainColor);
-    font-weight: 600;
-    display: inline-block;
-    width: 120px;
-}
-
-.info-list span {
-    color: #c6bfbf;
-    font-family: 'opensans-regular', sans-serif;
-}
-
 .about-buttons {
     margin-top: 25px;
 }
@@ -332,21 +327,20 @@ header .social li a:hover{
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0 20px; /* Adds breathing room on the sides */
     }
 
-    .about-image img {
-        margin-bottom: 30px;
+    .about-content {
+        text-align: center;
     }
 
-    .info-list strong {
-        display: block;
-        width: 100%;
-    }
-
+    .about-content h3,
+    .about-content h1,
     .about-buttons {
         text-align: center;
     }
 }
+
 
 
 
