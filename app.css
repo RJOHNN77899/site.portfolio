@@ -60,7 +60,7 @@ header {
     flex-direction: column;
 
     height: 100vh;
-    min-height: 500px;
+    min-height: 200px;
     width: 100%;
     background: var(--accentDark);
     background-size: cover !important;
@@ -523,7 +523,7 @@ header .social li a:hover{
 
 .text-box small{
     display: inline-block;
-    color: rgb(0, 0, 0);
+    color: #444343;
     margin-bottom: 15px;
 }
 
@@ -532,7 +532,7 @@ header .social li a:hover{
     padding: 0;
     margin: 0;
     border: none;
-    color: rgb(0, 0, 0);
+    color: #444343;
 }
 
 .text-box ul li {
@@ -552,7 +552,7 @@ header .social li a:hover{
     font-size: 14px;
     line-height: 1.6;
     border: none;
-    color: rgb(0, 0, 0);
+    color: #444343;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -882,4 +882,23 @@ header .social li a:hover{
     margin-right: 10px;
     margin-bottom: 2px;
 }
+
+#mouse-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999; /* high enough to cover navbar */
+
+  /* soft white glow centered on mouse */
+  background: radial-gradient(circle at center, rgba(255, 255, 255, .08) 0%, transparent 50%);
+  mix-blend-mode: screen; /* allows light to affect dark backgrounds */
+  transition: background-position 0.05s ease;
+}
+
+
+
+
 
