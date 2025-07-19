@@ -882,23 +882,3 @@ header .social li a:hover{
     margin-right: 10px;
     margin-bottom: 2px;
 }
-
-#mouse-light {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 9999; /* high enough to cover navbar */
-
-  /* soft white glow centered on mouse */
-  background: radial-gradient(circle at center, rgba(255, 255, 255, .08) 0%, transparent 50%);
-  mix-blend-mode: screen; /* allows light to affect dark backgrounds */
-  transition: background-position 0.05s ease;
-}
-
-
-
-
-
